@@ -35,3 +35,16 @@ h1,h2,h3,h4,h5,h6 {
     font-size: inherit;
 }
 /* #endregion */
+
+:root {
+    --Greys-Light-grey: #646d76;
+    --Greays-White: #FFF; 
+    --Color-Dark-green: #222F33;
+}
+
+body {
+    font-family: Rubik;
+    font-size: 0.875rem;
+    color: var(--Greays-White);
+}
+/*Стилі зазамовченням*/
