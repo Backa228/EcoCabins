@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: inherit;
 }
 /* #endregion */
-
+/*Стилі зазамовченням ПОЧАТОК*/
 :root {
     --Greys-Light-grey: #646d76;
     --Greays-White: #FFF; 
@@ -46,5 +46,38 @@ body {
     font-family: Rubik;
     font-size: 0.875rem;
     color: var(--Greays-White);
+    background-color: rgb(149, 20, 20);
 }
-/*Стилі зазамовченням*/
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+/* Стилі зазамовченням КІНЕЦ */
+/* Налаштування адаптиву ПОЧАТОК */
+[class*="__container"]{
+    max-width: 52.5rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    margin: 0 auto;
+}
+/*Налаштування адаптиву КІНЕЦ */
+/* Модулі ПОЧАТОК */
+.title {
+    font-family: "Merriweather";
+    color: var(--Greays-White);
+    font-size: 1.875rem;
+}
+
+.title__dark {
+    color: var(--Color-Dark-green);
+}
+/* Модулі КІНЕЦ */
+
