@@ -5,7 +5,7 @@
 * {
     padding: 0;
     margin: 0;
-    bottom: 0;
+    border: 0;
 }
 
 *,*::before, *::after {
@@ -20,6 +20,7 @@ html,body {
 a {
     color: inherit;
     text-decoration: none;
+    
 }
 
 ul li {
@@ -36,12 +37,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 button {
-    cursor: pointer;
+
     color: inherit;
     background-color: transparent;
+    font-weight: inherit;
+    font-size: inherit;
 }
 /* #endregion */
 /*Стилі зазамовченням ПОЧАТОК*/
+
 :root {
     --Greys-Light-grey: #646d76;
     --Greays-White: #FFF; 
@@ -105,25 +109,69 @@ body {
 }
 
 .header__logo {
-
+    width: 8.4375rem;
+    overflow: hidden;
+    transition: all ease 0.5s;
 }
+
+
 
 .header__body {
     display: flex;
     align-items: center;
-    gap: 2.6875rem;
+    column-gap: 2.6875rem;
+    transition: all ease 0.5s;
+}
+
+.header__button {
+    color: var(--Color-Dark-green);
+    background-color: white;
+    width: 5.625rem;
+    height: 2.125rem;
+    font-size: inherit;
+    border-radius: 0.75rem;
+    transition: all ease 0.5s;
+}
+
+.header__button:hover {
+    background-color: var(--Color-Dark-green);
+    color: white;
+    border-radius: 0.25rem;
+
 }
 
 .header__menu {
 
 }
 
+@media (max-width: 625px) {
+    .header__logo {
+        flex: 0 0 2.0625rem;
+    }
+
+    .menu__list {
+        column-gap: 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .header__button{
+        font-size: 14px;
+    }
+    .header__body{
+        column-gap: 1.25rem;
+    }
+}
+
 .menu__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: center;
-    gap: 2.5rem;
+    column-gap: 2.5rem;
+    row-gap: 0.625rem;
     font-size: 0.75rem;
     font-weight: 500;
+    transition: all ease 0.5s;
 }
 
 .menu__item {
@@ -131,10 +179,6 @@ body {
 }
 
 .menu__link {
-
-}
-
-.header__button {
 
 }
 
@@ -158,6 +202,14 @@ body {
 .main-section__video-link {}
 
 .main-section__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.main-section__image img{
     position: absolute;
     width: 100%;
     height: 100%;
