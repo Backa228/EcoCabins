@@ -249,6 +249,12 @@ body {
     object-fit: cover;
 }
 
+@media (max-width: 1000px) {
+    [class*="__container"]]{
+        padding: 0 20px;
+    }
+}
+
 @media (max-width: 43.75rem){
     .main-section__container {
         grid-template-columns: auto;
