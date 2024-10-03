@@ -1,21 +1,29 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper('.materials__slider', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
+let lastScrollTop = 0;//змінна для збереження позиції останнього скролінгу
+const header = document.querySelector(".header");
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+window.addEventListener('scroll', () => {
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if ((scrollTop > lastScrollTop) && (scrollTop > header.offsetHeight)) {
+        header.classList.add('hidden');
+        header.classList.add('dark');
+    } else if (scrollTop < lastScrollTop) {
+        header.classList.remove('hidden');
+  }
+  if (scrollTop < header.offsetHeight) {
+      header.classList.remove("dark")
+    }
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+    lastScrollTop = scrollTop;
+
 });
