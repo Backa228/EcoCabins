@@ -105,7 +105,7 @@ header.hidden {
     top: calc(-105 / 16 * 1rem);
 }
 
-.header__dark{
+.header.dark{
     background-color: var(--Color-Dark-green);
 }
 
@@ -258,7 +258,7 @@ header.hidden {
 }
 
 @media (max-width: 1000px) {
-    [class*="__container"]]{
+    [class*="__container"]{
         padding: 0 20px;
     }
 }
@@ -383,4 +383,27 @@ header.hidden {
     left: 0;
     width: 100%;
 
+}
+
+.inovate {
+    background-color: var(--Color-Dark-green);
+    padding: 72px 0 78px 0;
+}
+
+.inovate__title{
+    margin-bottom: 8px;
+} 
+
+.inovate__text {
+    display: flex;
+    gap: 43px;
+    justify-content: space-between;
+}
+
+.inovate__text p{
+    color: var(--Greys-White, #FFF);
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.7;
+    line-height: 24px;
 }
