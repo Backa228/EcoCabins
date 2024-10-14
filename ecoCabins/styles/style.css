@@ -274,7 +274,7 @@ header.hidden {
         justify-self: start;
     }
 
-    .main-section__title{
+    .title{
         font-size: 1.5rem;
     }
 }
@@ -310,16 +310,6 @@ header.hidden {
     z-index: 2;
 }
 
-.matirials::after{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 38.4%;
-    height: 8.75rem;
-    background-color: var(--Color-Dark-green);
-    height: 2.3125rem;
-}
-
 .materials__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -329,9 +319,10 @@ header.hidden {
     min-width: 0;
     position: relative;
     z-index: 2;
+    padding-bottom: 1.5625rem;
 }
 
-.material__content {
+.materials__content {
     display: flex;
     justify-items: flex-start;
     flex-direction: column;
@@ -340,6 +331,7 @@ header.hidden {
 
 .materials__title {
     text-align: left;
+    margin-top: 1.5625rem;
 }
 
 .materials__text {
@@ -366,8 +358,9 @@ header.hidden {
 
 .materials__slider {
     position: relative;
-    z-index: 2;
-    aspect-ratio: 325 / 366;
+    max-width: 400px;
+    justify-self: end;
+    transform: translate(0, -20.765027%);
 }
 
 .-slider-materials__slider {
@@ -383,7 +376,7 @@ header.hidden {
 .slider-materials__slide {
     position: relative;
     z-index: 2;
-    /* aspect-ratio: 325/366; */
+    aspect-ratio: 325/366;
 }
 
 .slider-materials__slide img {
@@ -427,6 +420,37 @@ span.swiper-pagination-bullet{
     margin: 0 !important;
 }
 
+@media (max-width: 768px){
+    .materials__container{
+        grid-template-columns: auto;
+    }
+    .materials__slider{
+        transform: translate(0, 0);
+    }
+}
+
+@media (min-width: 768px) {
+    .materials::before {
+            content: "";
+            width: 61.6%;
+            height: 2.1875rem;
+            background-color: var(--Greays-White);
+            position: absolute;
+            top: -2.1875rem;
+            left: 0;
+        }
+    
+        .materials::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 38.4%;
+            height: 8.75rem;
+            background-color: var(--Color-Dark-green);
+        }
+}
+
 .inovate {
     background-color: var(--Color-Dark-green);
     padding: 72px 0 78px 0;
@@ -448,4 +472,11 @@ span.swiper-pagination-bullet{
     font-weight: 400;
     opacity: 0.7;
     line-height: 24px;
+}
+
+@media(max-width: 768px){
+    .inovate__text{
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
 }
