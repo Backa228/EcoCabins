@@ -148,10 +148,6 @@ header.hidden {
 
 }
 
-.header__menu {
-
-}
-
 @media (max-width: 625px) {
     .header__logo {
         flex: 0 0 2.0625rem;
@@ -182,22 +178,6 @@ header.hidden {
     transition: all ease 0.5s;
 }
 
-.menu__item{
-
-}
-
-.menu__link{
-
-}
-
-.page{
-
-}
-
-.page__main{
-
-}
-
 .main-section {
     min-height: 100vh;
     position: relative;
@@ -215,8 +195,6 @@ header.hidden {
 
 }
 
-.main-section__content {}
-
 .main-section__label {
     margin: 0.75rem 0.75rem 0.75rem 0;
     font-size: 1rem;
@@ -225,10 +203,6 @@ header.hidden {
 
 .main-selection__label:not(:last-child){
     margin-bottom: 0.75rem;
-}
-
-.main-section__title {
-    
 }
 
 .main-section__video-link {
@@ -278,8 +252,6 @@ header.hidden {
         font-size: 1.5rem;
     }
 }
-
-.page__materials {}
 
 .swiper {
     overflow: hidden;
@@ -368,9 +340,6 @@ header.hidden {
     max-width: 325px;
     justify-self: end;
     transform: translate(0, -20.765027%);
-}
-
-.materials__wrapper {
 }
 
 .slider-materials__slide {
@@ -481,8 +450,6 @@ span.swiper-pagination-bullet{
     }
 }
 
-.page__info {}
-
 .info {
     background-color: var(--Greays-White);
     padding: 5.3125rem;
@@ -512,8 +479,6 @@ span.swiper-pagination-bullet{
     column-gap: 3.75rem;
     row-gap: 2.3125rem;
 }
-
-.info__item {}
 
 .info-h3 {
     color: var(--Color-Dark-green);
@@ -551,5 +516,75 @@ span.swiper-pagination-bullet{
     }
     .info__content{
         order: 1;
+    }
+}
+
+/* .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Color-Dark-green);
+    padding: 38px 50px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer__image {
+    height: 33px;
+}
+
+.p1 {
+    margin-right: 50px;
+    opacity: 0.6;
+}
+
+.p2,
+.p3 {
+    margin-left: 40px;
+} */
+
+footer{
+    background-color: var(--Color-Dark-green);
+    padding: 33px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    gap: 30px;
+}
+
+.footer__mail, .footer__mail-item {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.footer__mail:hover,
+.footer__menu-item:hover {
+    text-decoration: underline;
+}
+
+.footer__logo {
+
+}
+
+.footer__image {
+    justify-self: center;
+}
+
+.footer__menu {
+    justify-self: flex-end;
+    display: flex;
+    gap: 1.875rem;
+    align-items: center;
+}
+
+@media(max-width: 625px){
+    .footer__container{
+        display: flex;
+        flex-direction: column;
     }
 }
