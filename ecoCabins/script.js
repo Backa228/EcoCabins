@@ -28,3 +28,28 @@ window.addEventListener ('scroll', () => {
 
     lastScrollTop = scrollTop;
 });
+
+// Отримуємо елементи
+const modal = document.getElementById('videoModal');
+const playBtn = document.getElementById('playBtn');
+const closeBtn = document.getElementsByClassName('close')[0];
+const youtubeVideo = document.getElementById('youtubeVideo');
+// Коли користувач натискає на кнопку "Play"
+playBtn.onclick = function() {
+  modal.style.display = 'block';
+  // Автоматично запускаємо відео
+  youtubeVideo.src += "?autoplay=1";
+}
+// Коли користувач натискає на "x", щоб закрити модальне вікно
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+  // Зупиняємо відео
+  youtubeVideo.src = youtubeVideo.src.replace("?autoplay=1", "");
+}
+// Закриття модального вікна при натисканні поза ним
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+    youtubeVideo.src = youtubeVideo.src.replace("?autoplay=1", "");
+  }
+}
