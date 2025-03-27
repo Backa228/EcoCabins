@@ -217,7 +217,7 @@ header.hidden {
     width: 32px;
     height: 32px;
     flex: 0 0 32px;
-    background: url("./ecoCabins/img/play.svg") left no-repeat;
+    background: url("../img/play.svg") left no-repeat;
     border-radius: 50%;
 }
 
